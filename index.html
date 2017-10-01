@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8">
+      <title>Obsequiarte</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+      <link href="css/custom.css" rel="stylesheet">
+      <link rel="stylesheet" href="responsiveslide/responsiveslides.css">
+      <link rel="stylesheet" href="responsiveslide/themes.css">
+      <link rel="stylesheet" href="carousel/src/responsive-carousel.css" media="screen">
+      <link rel="stylesheet" href="carousel/src/responsive-carousel.slide.css" media="screen">
+      <link rel="stylesheet" href="carousel/assets/custom-responsive-carousel.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script type="text/javascript" src="liquidcarousel/js/jquery.liquidcarousel.js"></script>
+      <script src="responsiveslide/responsiveslides.min.js"></script>
+      <script src="responsiveslide/sliderhome.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="carousel/src/responsive-carousel.js"></script>
+      <script src="carousel/src/responsive-carousel.touch.js"></script>
+      <script src="carousel/src/responsive-carousel.drag.js"></script>
+      <script src="carousel/src/responsive-carousel.dynamic-containers.js"></script>
+      <script src="carousel/src/responsive-carousel.autoinit.js"></script>
+      <script src="carousel/src/responsive-carousel.autoplay.js"></script>
+      <script src="carousel/src/responsive-carousel.slide.js"></script>
+      <script src="carousel/src/globalenhance.js"></script>
+      <link rel="stylesheet" href="css/modal.css">
+      <script src="js/spa.js"></script>
+   </head>
+   <body>
+     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+     <div class="modal-dialog">
+     <div class="loginmodal-container">
+       <h1>Inicio de Sesion</h1><br>
+       <form>
+       <input type="text" name="user" placeholder="Usuario">
+       <input type="password" name="pass" placeholder="Contraseña">
+       <input type="submit" name="login" class="login loginmodal-submit" value="Ingresar">
+       </form>
+       <div class="login-help">
+       <a href="#">Registrarse</a> - <a href="#">Recuperar Contraseña</a>
+       </div>
+     </div>
+     </div>
+     </div>
+     <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+						    	  <div class="modal-dialog">
+										<div class="loginmodal-container">
+											<h1>Registro de Clientes</h1><br>
+										  <form>
+											<input type="text" name="user" placeholder="Nombre Completo" required>
+						          <input type="text" name="user" placeholder="Direccion" required>
+						          <input type="email" name="user" placeholder="Email" required>
+						          <input type="tel" name="user" placeholder="Telefono" required>
+											<input type="password" name="pass" placeholder="Contraseña" required>
+											<input type="submit" name="login" class="login loginmodal-submit" value="Registrarse">
+										  </form>
+										</div>
+									</div>
+			</div>
+
+			<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+									    	  <div class="modal-dialog">
+													<div class="loginmodal-container">
+														<h1>Contacto</h1><br>
+									          <div class="alert alert-info">
+									            <strong>Info!</strong> Si tienes alguna pregunta no dudes en contactarnos.  Estaremos atentos a responder cualquier inquietud que tengas.
+									          </div>
+													  <form>
+														<input type="text" name="user" placeholder="Nombre Completo" required>
+									          <input type="email" name="user" placeholder="Email" required>
+
+									          <div class="form-group"> <!-- City-->
+									        <label for="city_id" class="control-label">Mensaje</label>
+									        <textarea class="form-control" rows="5" name="mensaje" placeholder="No omitas detalle para que recibas la mejor orientación. (Máximo 500 caracteres)."></textarea>
+									        </div>
+														<input type="submit" name="login" class="login loginmodal-submit" value="Contactar">
+													  </form>
+													</div>
+												</div>
+				</div>
+      <div class="container">
+         <div class="row valign">
+            <div class="col-xs-12 col-md-6 col-bg-6">
+               <div class="logotipo">
+                  <a href="index.html"><img alt="" src="img/logotipo.png" alt="logotipo de la tienda" title="logotipo de la tienda"></a>
+               </div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-bg-6">
+               <div>
+                  <form class="navbar-form pd_search" role="search">
+                     <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Busca tu producto..." name="srch-term" id="srch-term">
+                        <div class="input-group-btn vertical-align">
+                           <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <nav class="navbar navbar-default">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a href="#">Quienes Somos</a></li>
+                  <li><a href="#">Productos</a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#contact-modal">Contacto</a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#login-modal">Iniciar Sesion</a></li>
+                  <li><a href="#" data-toggle="modal" data-target="#register-modal">Registrarse</a></li>
+               </ul>
+            </div>
+         </nav>
+         <div class="container-fluid">
+            <div class="col-sm-12 col-md-3 col-lg-3 no_mg_left no_mg_right">
+               <div class="panel panel-default">
+                  <div class="panel-body">
+                     <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                           <div class="panel-heading">
+                              <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th-list">
+                                 </span> Categorías</a>
+                              </h4>
+                           </div>
+                           <div id="collapseOne" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                 <table class="table">
+                                    <tr>
+                                       <td><a href="#">Todos</a>
+                                          <span class="badge badge_categorias pull-right">30</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="#">Desayunos y Sorpresas</a>
+                                          <span class="badge badge_categorias pull-right">18</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="#">Dulcería y Repostería</a>
+                                          <span class="badge badge_categorias pull-right">56</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="#">Tarjetas</a>
+                                          <span class="badge badge_categorias pull-right">25</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="#">Peluches</a>
+                                          <span class="badge badge_categorias pull-right">12</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="#">Souvenires</a>
+                                          <span class="badge badge_categorias pull-right">4</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="#">Chocolates</a>
+                                          <span class="badge badge_categorias pull-right">40</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="#">Termos y Mugs</a>
+                                          <span class="badge badge_categorias pull-right">22</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td><a href="#">Prendas Personalizadas</a>
+                                          <span class="badge badge_categorias pull-right">15</span>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-9 content-padding">
+               <div class="rslides_container">
+                  <ul class="rslides" id="slider1">
+                     <li><a href="detalle_articulo.html"><img src="responsiveslide/1.jpg" alt="Anuncio 01" title="Anuncio 01"></a></li>
+                     <li><a href="detalle_articulo.html"><img src="responsiveslide/2.jpg" alt="Anuncio 02" title="Anuncio 02"></a></li>
+                     <li><a href="detalle_articulo.html"><img src="responsiveslide/3.jpg" alt="Anuncio 03" title="Anuncio 03"></a></li>
+                  </ul>
+               </div>
+
+               <div id="main" class="row">
+                  <div class="col-xs-12 col-md-12 col-lg-12 content_home">
+                     <h2>Nuestros Productos</h2>
+                     <div >
+                       <div class="slag">
+                          <div class="thumbnail">
+                             <a href="#" onclick="cargar('detalle_articulo.html')"><img src="img/Producto.png" alt="imagen de artículo nuevo" title="imagen de artículo nuevo"></a>
+                             <div class="caption">
+                                <h4 class="text-center"><a href="#" onclick="cargar('detalle_articulo.html')">Desayuno Sorpresa</a>
+                                </h4>
+                             </div>
+                             <div class="ratings">
+                                <p class="text-center">
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                                <p class="text-center">$ 50.000</p>
+                                <p class="lead text-center"><button class="btn btn-default btn_buy_carousel"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Añadir al carrito</button></p>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="slag">
+                          <div class="thumbnail">
+                             <a href="#" onclick="cargar('detalle_articulo.html')"><img src="img/Producto.png" alt="imagen de artículo nuevo" title="imagen de artículo nuevo"></a>
+                             <div class="caption">
+                                <h4 class="text-center"><a href="#" onclick="cargar('detalle_articulo.html')">Desayuno Sorpresa</a>
+                                </h4>
+                             </div>
+                             <div class="ratings">
+                                <p class="text-center">
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                                <p class="text-center">$ 50.000</p>
+                                <p class="lead text-center"><button class="btn btn-default btn_buy_carousel"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Añadir al carrito</button></p>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="slag">
+                          <div class="thumbnail">
+                             <a href="#" onclick="cargar('detalle_articulo.html')"><img src="img/Producto.png" alt="imagen de artículo nuevo" title="imagen de artículo nuevo"></a>
+                             <div class="caption">
+                                <h4 class="text-center"><a href="#" onclick="cargar('detalle_articulo.html')">Desayuno Sorpresa</a>
+                                </h4>
+                             </div>
+                             <div class="ratings">
+                                <p class="text-center">
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                                <p class="text-center">$ 50.000</p>
+                                <p class="lead text-center"><button class="btn btn-default btn_buy_carousel"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Añadir al carrito</button></p>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="slag">
+                          <div class="thumbnail">
+                             <a href="#" onclick="cargar('detalle_articulo.html')"><img src="img/Producto.png" alt="imagen de artículo nuevo" title="imagen de artículo nuevo"></a>
+                             <div class="caption">
+                                <h4 class="text-center"><a href="#" onclick="cargar('detalle_articulo.html')">Desayuno Sorpresa</a>
+                                </h4>
+                             </div>
+                             <div class="ratings">
+                                <p class="text-center">
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                                <p class="text-center">$ 50.000</p>
+                                <p class="lead text-center"><button class="btn btn-default btn_buy_carousel"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Añadir al carrito</button></p>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="slag">
+                          <div class="thumbnail">
+                             <a href="#" onclick="cargar('detalle_articulo.html')"><img src="img/Producto.png" alt="imagen de artículo nuevo" title="imagen de artículo nuevo"></a>
+                             <div class="caption">
+                                <h4 class="text-center"><a href="#" onclick="cargar('detalle_articulo.html')">Desayuno Sorpresa</a>
+                                </h4>
+                             </div>
+                             <div class="ratings">
+                                <p class="text-center">
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                                <p class="text-center">$ 50.000</p>
+                                <p class="lead text-center"><button class="btn btn-default btn_buy_carousel"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Añadir al carrito</button></p>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="slag">
+                          <div class="thumbnail">
+                             <a href="#" onclick="cargar('detalle_articulo.html')"><img src="img/Producto.png" alt="imagen de artículo nuevo" title="imagen de artículo nuevo"></a>
+                             <div class="caption">
+                                <h4 class="text-center"><a href="#" onclick="cargar('detalle_articulo.html')">Desayuno Sorpresa</a>
+                                </h4>
+                             </div>
+                             <div class="ratings">
+                                <p class="text-center">
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star"></span>
+                                   <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                                <p class="text-center">$ 50.000</p>
+                                <p class="lead text-center"><button class="btn btn-default btn_buy_carousel"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Añadir al carrito</button></p>
+                             </div>
+                          </div>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+            <footer>
+              <hr>
+            <div class="row">
+                    <div class="col-md-4 col-xs-12 text-center" style="margin-right: -45px;">
+                        <a href="http://www.mintic.gov.co/" target="_blank"><img src="img/gobierno.png" style="height: 100px;"></a>
+                    </div>
+                    <div class="col-md-3 col-xs-12 text-center" style="margin-right: -30px;">
+                        <a href="http://www.codaltec.com/" target="_blank"><img src="img/codaltecNew.png" style="height: 100px;"></a>
+                    </div>
+                    <div class="col-md-1 col-xs-12 text-center" style="margin-right: -20px;">
+                        <img src="img/aliadoNew.png" style="height: 100px;">
+                    </div>
+                    <div class="col-md-2 col-xs-12 text-center">
+                        <a href="http://www.cccucuta.org.co/" target="_blank"><img src="img/camaraNew.png" style="height: 100px;"></a>
+                    </div>
+                    <div class="col-md-2 col-xs-12 text-center">
+                        <a href="http://www.ufps.edu.co/" target="_blank"><img src="img/ufpsNew.png" style="height: 100px;"></a>
+                    </div>
+                </div>
+                <div class="row text-center">
+              Todos los derechos reservados ©
+                </div>
+          </footer>
+      </div>
+   </body>
+</html>
